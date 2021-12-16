@@ -164,7 +164,8 @@ p {
   justify-content: space-between;
 }
 
-.accordion:hover {
+h2:hover,
+.arrow-down:hover {
   color: orange;
   cursor: pointer;
 }
@@ -209,6 +210,10 @@ p {
   width: 250px;
   position: absolute;
   top: 120px;
+}
+
+.hide {
+  display: none;
 }
 
 /*==============================================================
@@ -299,8 +304,66 @@ p {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 1200px) {
+  .main,
+  .shadow {
+    display: none;
+  }
+
+  .card {
+    height: 450px;
+    width: 65vw;
+    display: flex;
+    flex-direction: none;
+    align-items: flex-end;
+  }
+
+  .container {
+    width: 50%;
+  }
+
+  h1 {
+    width: 10vw;
+    margin: 20px 25vw 27px 0;
+  }
+
+  .container {
+    margin: 0 10vw 0 0;
+    width: 25vw;
+  }
+
+  .divider {
+    margin: 13px 0 13px 0;
+  }
+
+  .hide {
+    display: block;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+  }
+  .woman {
+    left: 13vw;
+    top: 170px;
+    height: 320px;
+    width: 400px;
+    z-index: 1;
+  }
+
+  .shadow-2 {
+    left: 12.5vw;
+    top: 200px;
+    height: 350px;
+    width: 400px;
+  }
+
+  .box {
+    height: 200px;
+    width: 200px;
+    left: 7.8vw;
+    top: 270px;
+    z-index: 1;
+  }
 }
 
 @media print,
