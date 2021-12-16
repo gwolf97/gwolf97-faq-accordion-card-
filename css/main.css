@@ -101,44 +101,58 @@ body {
 }
 
 h1 {
-  font-size: 50px;
-  margin-top: 180px;
+  font-size: 30px;
+  margin-top: 100px;
   margin-bottom: 35px;
+  padding-top: 20px;
 }
 
 h2 {
   font-size: 13px;
   font-weight: 400;
+  color: hsl(237, 12%, 33%);
 }
 
-h2.active {
+.accordion.active h2 {
   font-size: 13px;
   font-weight: 700;
 }
 
+.accordion.active .arrow-down {
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+
 p {
   font-size: 12px;
+  color: hsl(240, 6%, 50%);
 }
 
 .panel {
   margin: 8px 8px 0px 0;
   width: 60vmin;
-  display: none;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.5s ease;
+  transition: height 0.5s ease;
 }
 
-.panel.active {
+.panel.active,
+.panel:target {
   margin: 8px 8px 0px 0;
   width: 60vmin;
   display: flex;
+  height: auto;
 }
 
 .card {
-  margin: 40px auto 0 auto;
+  margin: 120px auto 0 auto;
   background-color: white;
   display: flex;
   flex-direction: column;
-  height: 90vh;
-  width: 85vw;
+  height: 80vh;
+  width: 80vw;
   border-radius: 30px;
   justify-content: center;
   align-items: center;
@@ -157,7 +171,18 @@ p {
 
 .container {
   width: 80%;
-  height: 80%;
+  height: 100%;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+}
+
+.container::-webkit-scrollbar {
+  height: 5px;
+  width: 2px;
+}
+.container::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  outline: 1px solid #000;
 }
 
 .divider {
@@ -167,7 +192,26 @@ p {
   margin-top: 18px;
   opacity: 0.4;
 }
-/* ==========================================================================
+
+.main,
+.shadow {
+}
+
+.main {
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  top: -24px;
+}
+
+.shadow {
+  height: 105px;
+  width: 250px;
+  position: absolute;
+  top: 120px;
+}
+
+/*==============================================================
    Helper classes
    ========================================================================== */
 

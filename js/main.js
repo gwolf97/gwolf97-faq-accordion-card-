@@ -1,8 +1,11 @@
-var accordion = document.querySelector(".accordion")
-var panel = document.querySelector(".panel")
-var question = document.querySelector("h2")
+var accordions = document.querySelectorAll(".accordion")
+var panels = document.querySelectorAll(".panel")
 
+
+accordions.forEach((accordion) =>{ 
 accordion.addEventListener("click", function(){
-    question.classList.toggle("active")
+    const panel = accordion.nextElementSibling
+
+    accordion.classList.toggle("active")
     panel.classList.toggle("active")
-})
+})})
