@@ -93,9 +93,13 @@ textarea {
   font-family: "Kumbh Sans", sans-serif;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   display: flex;
-  background-color: hsl(273, 75%, 66%);
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   justify-content: center;
   align-items: center;
 }
